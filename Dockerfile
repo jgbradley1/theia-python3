@@ -5,7 +5,7 @@ RUN apt-get update \
     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 
 # jupyter and nbconvert are required to read jupyter notebooks by the python extension
-RUN pip3 install pylint jupyter nbconvert
+RUN pip3 install pylint autopep8 jupyter nbconvert
 
 RUN mkdir -p /home/project
 
